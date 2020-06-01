@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qhCartoon/r.dart';
 
 void main() {
   runApp(MyApp());
@@ -97,6 +98,17 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            new Image.asset(
+              R.assetsImgHomeHomeChecked,
+              width: 100.0,
+              height: 100.0,
+              repeat:ImageRepeat.noRepeat ,//当一个图片占不满容器的时候这个可以控制图片水平ImageRepeat.repeatX， 或者垂直ImageRepeat.repeatY  或者依次排列ImageRepeat.repeat，来占满   或者正常ImageRepeat.noRepeat
+              fit: BoxFit.fill,
+              centerSlice: new Rect.fromCircle(//可以设置图片在拉伸的时候从某一个固定的地方拉伸类似.9
+                center: const Offset(200.0, 200.0),
+                radius: 10.0,
+              ),
+            ),
             Text(
               'You have pushed the button this many times:',
             ),
