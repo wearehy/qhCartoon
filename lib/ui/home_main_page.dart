@@ -1,3 +1,5 @@
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 import '../../common.dart';
 import '../../r.dart';
 import 'package:flutter/material.dart';
@@ -31,7 +33,8 @@ class _HomePageState extends State<HomeMainPage> with AutomaticKeepAliveClientMi
       body: WillPopScope(child: PageView(
         children: <Widget>[
           Text("one"), // 页面一
-          Text("two") //  页面二
+          Text("two"),
+          Text('three'),//  页面二
         ],
         controller: _pageController,
         onPageChanged: (int page) {
@@ -53,19 +56,26 @@ class _HomePageState extends State<HomeMainPage> with AutomaticKeepAliveClientMi
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.white,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
+//        showSelectedLabels: false,
+//        showUnselectedLabels: false,
         items: [
           BottomNavigationBarItem(
-              icon: Image.asset(R.assetsImgHomeHomeNormal, width: 24, height: 24,),
-              activeIcon: Image.asset(R.assetsImgHomeHomeChecked, width: 24, height: 24,),
-              title: const Text("首页")
+//              icon: Image.asset(R.assetsImgHomeHomeNormal, width: 24, height: 24,),
+//              activeIcon: Image.asset(R.assetsImgHomeHomeChecked, width: 24, height: 24,),
+              icon: Image.asset(R.assetsImgHomeIcHomeComicNormal,width: 24, height: 24),
+              activeIcon: Image.asset(R.assetsImgHomeIcHomeComicSelected, width: 24, height: 24,),
+              title: const Text("漫画")
           ),
           BottomNavigationBarItem(
-              icon: Image.asset(R.assetsImgHomeMineNormal, width: 24, height: 24,),
-              activeIcon: Image.asset(R.assetsImgHomeMineChecked, width: 24, height: 24,),
+              icon: Image.asset(R.assetsImgHomeIcHomeBookshelfNormal, width: 24, height: 24,),
+              activeIcon: Image.asset(R.assetsImgHomeIcHomeBookshelfSelected, width: 24, height: 24,),
+              title: const Text("福利")
+          ),
+          BottomNavigationBarItem(
+              icon: Image.asset(R.assetsImgHomeIcHomeMyselfNormal, width: 24, height: 24,),
+              activeIcon: Image.asset(R.assetsImgHomeIcHomeMyselfSelected, width: 24, height: 24,),
               title: const Text("我的")
-          )
+          ),
         ],
         currentIndex: index,
         onTap: (int index) {
