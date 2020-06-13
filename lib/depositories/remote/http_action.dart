@@ -1,11 +1,22 @@
 import 'dart:convert';
 import 'dart:io';
-import 'package:baseflutterproject/c.dart';
-import 'package:baseflutterproject/common.dart';
-import 'package:baseflutterproject/model/db/user_model.dart';
-import 'package:baseflutterproject/model/result_model.dart';
+import 'package:qhCartoon/c.dart';
+import 'package:qhCartoon/common.dart';
+import 'package:qhCartoon/model/JsonToDart/cartoon_index_banner.dart';
+import 'package:qhCartoon/model/JsonToDart/cartoon_index_home.dart';
+import 'package:qhCartoon/model/JsonToDart/cartoon_index_old.dart';
+import 'package:qhCartoon/model/JsonToDart/cartoon_index_old_list.dart';
+import 'package:qhCartoon/model/JsonToDart/cartoon_index_old_list_categories.dart';
+import 'package:qhCartoon/model/JsonToDart/cartoon_like_list.dart';
+import 'package:qhCartoon/model/JsonToDart/cartoon_synopsis_catalog.dart';
+import 'package:qhCartoon/model/JsonToDart/cartoon_synopsis_intro.dart';
+
+
+import 'package:qhCartoon/model/db/user_model.dart';
+import 'package:qhCartoon/model/result_model.dart';
 import 'package:dio/dio.dart';
-import 'package:baseflutterproject/depositories/remote/http_request.dart';
+import 'package:qhCartoon/depositories/remote/http_request.dart';
+import 'package:qhCartoon/model/result_model.dart';
 import 'dart:ui' as ui;
 
 import 'api.dart';
@@ -69,13 +80,47 @@ class HttpAction {
     return null;
   }
 
-  registerByMobile(String mobile, String password, String smsCode, DC<UserModel> dc) async {
-    _handle(await HttpRequest.instance.post(Api.REGISTER_BY_MOBILE, formParams: {
-      'mobile': mobile,
-      'password': hmacSha1(password),
-      'code': smsCode
-    }), dc);
-  }
 
+    ///  请求
+    //    registerByMobile(String mobile, String password, String smsCode, DC<UserModel> dc) async {
+    //      _handle(await HttpRequest.instance.post(Api.REGISTER_BY_MOBILE, formParams: {
+    //        'mobile': mobile,
+    //        'password': hmacSha1(password),
+    //        'code': smsCode
+    //      }), dc);
+    //    }
+
+    //    CartoonIndexOld(DC<CartoonIndexOld> dc) async {
+    //      _handle(await HttpRequest.instance.get(Api.HOME_RECOMMEND), dc);
+    //    }
+
+    ///漫画首页
+    //轮播
+    cartoonIndexBanner(DC<List<CartoonIndexBanner>> dc) async {
+      _handle(await HttpRequest.instance.get(Api.INDEX_BANNER), dc);
+    }
+    //主体内容
+    cartoonIndexHome(DC<List<CartoonIndexHome>> dc) async {
+      _handle(await HttpRequest.instance.get(Api.HOME_RECOM2), dc);
+    }
+
+    ///漫画大纲
+    //简介
+    cartoonSynopsisIntro(int work_id,DC<CartoonSynopsisIntro> dc) async {
+      _handle(await HttpRequest.instance.get(Api.COMIC_INFO,queryParams:{
+       'work_id': work_id
+      }), dc);
+    }
+    //目录
+    cartoonSynopsisCatalog(int work_id,DC<List<CartoonSynopsisCatalog>> dc) async {
+      _handle(await HttpRequest.instance.get(Api.CHAPTER_LIST,queryParams: {
+        'work_id': work_id
+      }), dc);
+    }
+    //猜你喜欢
+    cartoonLikeList(DC<List<CartoonLikeList>> dc) async {
+      _handle(await HttpRequest.instance.get(Api.V2_DT_LIKELIST), dc);
+    }
 }
+
 

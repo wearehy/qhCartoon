@@ -1,7 +1,10 @@
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:qhCartoon/ui/cartoon/cartoon_index.dart';
+import 'package:qhCartoon/ui/cartoon/cartoon_synopsis.dart';
+import 'package:qhCartoon/ui/cartoon/cartoon_synopsis/cartoon_synopsis_tab_bar.dart';
 
-import '../../common.dart';
-import '../../r.dart';
+import '../common.dart';
+import '../r.dart';
 import 'package:flutter/material.dart';
 
 class HomeMainPage extends StatefulWidget {
@@ -29,12 +32,12 @@ class _HomePageState extends State<HomeMainPage> with AutomaticKeepAliveClientMi
   Widget build(BuildContext context) {
     super.build(context);
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.transparent,
       body: WillPopScope(child: PageView(
         children: <Widget>[
-          Text("one"), // 页面一
-          Text("two"),
-          Text('three'),//  页面二
+          CartoonIndex(),   //漫画
+          CartoonSynopsis(),   //福利
+          CartoonSynopsisTabBar()
         ],
         controller: _pageController,
         onPageChanged: (int page) {

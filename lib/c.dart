@@ -63,4 +63,5 @@ class CCColor {
 
   static const textGray = Color(0xffA5A5A5);
 
+  static const yellow   = Color(0xffFED00C);
 }

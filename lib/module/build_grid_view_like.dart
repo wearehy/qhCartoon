@@ -3,14 +3,15 @@ import 'dart:convert' as convert;
 import 'package:flutter/material.dart';
 import 'package:qhCartoon/model/JsonToDart/cartoon_index_home.dart';
 import 'package:qhCartoon/model/JsonToDart/cartoon_index_home_list.dart';
+import 'package:qhCartoon/model/JsonToDart/cartoon_like_list.dart';
 import 'package:qhCartoon/module/clip_img.dart';
 import 'package:qhCartoon/r.dart';
 import 'package:qhCartoon/extension/build_context_extension.dart';
 import 'package:qhCartoon/ui/cartoon/cartoon_synopsis.dart';
 
-class BuildGridView extends StatelessWidget {
+class BuildGridViewLike extends StatelessWidget {
 
-  BuildGridView({
+  BuildGridViewLike({
     Key key,
     //JSON数据
     this.list,
@@ -54,7 +55,7 @@ class BuildGridView extends StatelessWidget {
       );
     }
 
-    Container buildGridViewChild(CartoonIndexHomeList e, aspectRatio) {
+    Container buildGridViewChild(CartoonLikeList e, aspectRatio) {
       //网格子组件
       return Container(
         alignment: Alignment(0, -1),

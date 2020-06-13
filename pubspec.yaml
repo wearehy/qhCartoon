@@ -40,6 +40,13 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.3
 
+  #文字图片
+  font_awesome_flutter: 8.8.1
+  #轮播图片
+  flutter_banner_swiper: ^0.1.4
+  #多样式网格布局
+  flutter_staggered_grid_view: ^0.3.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -62,11 +69,88 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     # assets-generator-begin
-    - assets/img/home_home_checked.png
-    - assets/img/home_home_normal.png
-    - assets/img/home_mine_checked.png
-    - assets/img/home_mine_normal.png
+    - assets/img/assets/about_our_logo.jpg
+    - assets/img/assets/new_index_page_guide_0.jpg
+    - assets/img/assets/new_index_page_guide_1.jpg
+    - assets/img/assets/new_index_page_guide_2.jpg
+    - assets/img/assets/new_index_page_guide_3.jpg
+    - assets/img/home/ic_home_bookshelf_normal.png
+    - assets/img/home/ic_home_bookshelf_selected.png
+    - assets/img/home/ic_home_comic_normal.png
+    - assets/img/home/ic_home_comic_selected.png
+    - assets/img/home/ic_home_home_normal.png
+    - assets/img/home/ic_home_home_selected.png
+    - assets/img/home/ic_home_myself_normal.png
+    - assets/img/home/ic_home_myself_selected.png
+    - assets/img/home/ic_home_topic_normal.png
+    - assets/img/home/ic_home_topic_selected.png
+    - assets/img/mipmapXxhdpi/addimg_1x.png
+    - assets/img/mipmapXxhdpi/bg_kaitonghuiyuan.png
+    - assets/img/mipmapXxhdpi/cartoon.png
+    - assets/img/mipmapXxhdpi/ic_banner_arc.png
+    - assets/img/mipmapXxhdpi/ic_close_ppw.png
+    - assets/img/mipmapXxhdpi/ic_coin_get.png
+    - assets/img/mipmapXxhdpi/ic_dialog_login_image.png
+    - assets/img/mipmapXxhdpi/ic_dialog_login_phone.png
+    - assets/img/mipmapXxhdpi/ic_dialog_login_qq.png
+    - assets/img/mipmapXxhdpi/ic_dialog_login_weixin.png
+    - assets/img/mipmapXxhdpi/ic_filter_down.png
+    - assets/img/mipmapXxhdpi/ic_filter_up.png
+    - assets/img/mipmapXxhdpi/ic_launcher.png
+    - assets/img/mipmapXxhdpi/ic_login_recommend.png
+    - assets/img/mipmapXxhdpi/ic_members_normal.png
+    - assets/img/mipmapXxhdpi/ic_members_vip.png
+    - assets/img/mipmapXxhdpi/ic_paid.png
+    - assets/img/mipmapXxhdpi/ic_recommend_free.png
+    - assets/img/mipmapXxhdpi/ic_recommend_look.png
+    - assets/img/mipmapXxhdpi/ic_scroll_end.png
+    - assets/img/mipmapXxhdpi/ic_search_delete.png
+    - assets/img/mipmapXxhdpi/ic_search_no_result.png
+    - assets/img/mipmapXxhdpi/ic_search_time.png
+    - assets/img/mipmapXxhdpi/ic_tag_author.png
+    - assets/img/mipmapXxhdpi/ic_topic_detail_about_comment.png
+    - assets/img/mipmapXxhdpi/ic_topic_detail_about_follow.png
+    - assets/img/mipmapXxhdpi/ic_topic_detail_popularity.png
+    - assets/img/mipmapXxhdpi/ic_world_btn_search.png
+    - assets/img/mipmapXxhdpi/ic_xemh_head.png
+    - assets/img/mipmapXxhdpi/icon_order.png
+    - assets/img/mipmapXxhdpi/icon_order_dao.png
+    - assets/img/mipmapXxhdpi/icon_read_by_ad.png
+    - assets/img/mipmapXxhdpi/img_check_top.png
+    - assets/img/mipmapXxhdpi/img_checked_coin.png
+    - assets/img/mipmapXxhdpi/img_loading.png
+    - assets/img/mipmapXxhdpi/img_praise_top_banner.png
+    - assets/img/mipmapXxhdpi/img_splash_bottom.png
+    - assets/img/mipmapXxhdpi/img_uncheck_coin.png
+    - assets/img/mipmapXxhdpi/index_category.png
+    - assets/img/mipmapXxhdpi/index_free.png
+    - assets/img/mipmapXxhdpi/index_hot.png
+    - assets/img/mipmapXxhdpi/index_new.png
+    - assets/img/mipmapXxhdpi/myself_ordinary.png
+    - assets/img/mipmapXxhdpi/protocol_bottom.png
+    - assets/img/mipmapXxhdpi/protocol_top.png
+    - assets/img/mipmapXxhdpi/tip_dialog.png
+    - assets/img/mipmapXxhdpi/welcome.png
     - assets/img/README.md
+    - assets/img/res/default_rectangle.png
+    - assets/img/res/default_square.png
+    - assets/img/res/home_bottom_end.gif
+    - assets/img/res/home_category.png
+    - assets/img/res/home_free.png
+    - assets/img/res/home_hot.png
+    - assets/img/res/home_update.png
+    - assets/img/res/ic_banner_arc.png
+    - assets/img/res/ic_launcher_192.png
+    - assets/img/res/ic_launcher_256.png
+    - assets/img/res/ic_launcher_384.png
+    - assets/img/res/ic_launcher_512.png
+    - assets/img/res/ic_next.png
+    - assets/img/res/ic_xemh_head_384.png
+    - assets/img/res/lib_update_app_top_bg.png
+    - assets/img/res/protocol_bottom.png
+    - assets/img/res/protocol_top.png
+    - assets/img/res/shade.jpg
+    - assets/img/res/welcome.png
     - assets/README.md
   # assets-generator-end
 

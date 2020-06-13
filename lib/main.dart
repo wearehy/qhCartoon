@@ -1,5 +1,5 @@
 
-import 'ui/home/home_main_page.dart';
+import 'ui/home_main_page.dart';
 import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -33,7 +33,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '豹小贝',
+
+      title: '趣话漫画',
       navigatorKey: Global.navigatorState,
       navigatorObservers: [BotToastNavigatorObserver()],
       localizationsDelegates: [
@@ -54,7 +55,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           primaryColor: CCColor.primaryColor,
           accentColor: CCColor.accentColor,
-          backgroundColor: CCColor.backgroundColor,
+          backgroundColor: Colors.transparent,
           primaryTextTheme: TextTheme(
               bodyText1: TextStyle(color: CCColor.textColorPrimary),
               subtitle1: TextStyle(color: CCColor.textColorSecondary)),
